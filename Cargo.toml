@@ -1,0 +1,25 @@
+[package]
+name = "sciter-js-rust-boilerplate"
+version = "0.1.0"
+authors = ["GirkovArpa <girkovarpa@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sciter-rs = "*"
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[package.metadata.winres]
+OriginalFilename = "foo.exe"
+LegalCopyright = "Copyright © Foo 2021"
+FileDescription = "Foo: Bar Baz."
+ProductName = "Foo"
+ProductVersion = "0.1.0"
+
+[profile.release]
+opt-level = "z"  # Optimize for size.
+panic = "abort"
+debuginfo = "0"
