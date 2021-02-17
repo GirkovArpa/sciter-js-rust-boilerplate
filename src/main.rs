@@ -1,5 +1,5 @@
-const NUMBER_OF_FUNCTIONS: usize = 3;
 // #![windows_subsystem="windows"]
+const NUMBER_OF_FUNCTIONS: usize = 3;
 #[macro_use] extern crate sciter;
 use sciter::{ Element, Value, FromValue, HELEMENT, types::{BOOL, VALUE} };
 use std::thread;
