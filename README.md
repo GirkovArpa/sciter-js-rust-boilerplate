@@ -11,7 +11,7 @@ Run `cargo build --release` and find the resulting executable in `target/release
 Requires the folder containing `sciter.dll` to be in your `PATH`.
 
 - [x] Call Rust (Sync) from JavaScript
-- [ ] Call Rust (Async) from JavaScript
+- [x] Call Rust (Async) from JavaScript
 - [ ] Call JavaScript from Rust
 - [x] Set Executable Icon
 - [x] Set Taskbar Icon
