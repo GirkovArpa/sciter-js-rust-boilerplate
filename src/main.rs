@@ -61,9 +61,13 @@ impl sciter::om::Passport for Object {
 #[derive(Debug)]
 struct Handler { asset: sciter::om::IAssetRef<Object> }
 impl sciter::EventHandler for Handler {
+    fn attached(&mut self, root: HELEMENT) {
+        println!("attached"); // prints
+		Element::from(root).call_function("set_title", &make_args!("quick maths!")); // does nothing
+	}
     fn get_asset(&mut self) -> Option<&sciter::om::som_asset_t> {
 		Some(self.asset.as_ref())
-	}
+    }
 }
 fn main() {
     sciter::set_options(sciter::RuntimeOptions::DebugMode(false)).unwrap();

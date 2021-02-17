@@ -10,7 +10,9 @@ function adjustWindow() {
   Window.this.move((sw - w) / 2, (sh - h) / 2, w, h, true);
 }
 
-function set_title(text) {
+// function set_title(text) {
+// causes sum_async to crash with STATUS_ACCESS_VIOLATION Segmentation fault
+document.set_title = function (text) {
   $('h1').textContent = Window.this.rust.capitalize(text);
 }
 
