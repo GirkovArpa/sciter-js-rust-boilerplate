@@ -52,7 +52,7 @@ impl sciter::om::Passport for Object {
 		method.func = Some(on_capitalize);
         method.params = 1;
 		let mut pst = Box::new(som_passport_t::default());
-		pst.name = atom("nativeObject");
+		pst.name = atom("rust");
 		pst.n_methods = NUMBER_OF_FUNCTIONS;
         pst.methods = Box::into_raw(methods) as *const _;
 		Box::leak(pst)
@@ -61,19 +61,7 @@ impl sciter::om::Passport for Object {
 #[derive(Debug)]
 struct Handler { asset: sciter::om::IAssetRef<Object> }
 impl sciter::EventHandler for Handler {
-	fn attached(&mut self, root: HELEMENT) {
-        println!("attached");
-        &Element::from(root).call_function("set_title", &make_args!("quick maths!"));
-	}
-	fn detached(&mut self, root: HELEMENT) {
-        println!("detached");
-        &Element::from(root).call_function("set_title", &make_args!("quick maths!"));
-	}
-	fn document_complete(&mut self, root: HELEMENT, _target: HELEMENT) {
-        println!("loaded");
-        &Element::from(root).call_function("set_title", &make_args!("quick maths!"));
-	}
-	fn get_asset(&mut self) -> Option<&sciter::om::som_asset_t> {
+    fn get_asset(&mut self) -> Option<&sciter::om::som_asset_t> {
 		Some(self.asset.as_ref())
 	}
 }
