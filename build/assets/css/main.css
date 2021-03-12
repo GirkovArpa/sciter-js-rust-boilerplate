@@ -6,7 +6,6 @@
 * {
   text-align: center;
   vertical-align: middle;
-  font-size: 6vh;
 }
 
 html {
@@ -21,8 +20,10 @@ body {
 }
 
 .container {
-  size: *;
+  size: max-content;
   padding: 1em;
+  margin: auto;
+  flow: vertical;
 }
 
 .col {
@@ -34,15 +35,16 @@ body {
 .row {
   size: *;
   flow: horizontal;
+  border-spacing: 0.5em;
 }
 
 input {
-  size: *;
-  text-align: right;
+  width: *;
+  min-width: 5em;
 }
 
-input>caption {
-  size: *;
+input > caption {
+  text-align: right;
 }
 
 button {
@@ -51,4 +53,5 @@ button {
 
 button>span {
   width: *;
+  text-align: right;
 }

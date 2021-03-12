@@ -9,24 +9,20 @@
   </head>
 
   <body>
-    <div .col .container>
+    <div .container>
       <div .row>
-        <button #sum><span>Sum:</span></button>
-      </div>
-      <div .row>
-        <input |number .sum value=2 />
-      </div>
-      <div .row>
-        <input |number .sum value=2 />
-      </div>
-      <div .row>
-        <button #sum_async><span>Sum Async:</span></button>
-      </div>
-      <div .row>
-        <input |number .sum_async value=4 />
-      </div>
-      <div .row>
-        <input |number .sum_async value=1 />
+        <div .col .w-30>
+          <div .row><button #sum><span>Sum:</span></button></div>
+          <div .row><button #sum_async><span>Sum Async:</span></button></div>
+        </div>
+        <div .col>
+          <div .row><input |number .sum value=2 /></div>
+          <div .row><input |number .sum_async value=4 /></div>
+        </div>
+        <div .col>
+          <div .row><input |number .sum value=2 /></div>
+          <div .row><input |number .sum_async value=1 /></div>
+        </div>
       </div>
     </div>
   </body>
