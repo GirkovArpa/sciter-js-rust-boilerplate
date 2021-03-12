@@ -4,8 +4,10 @@ adjustWindow();
 
 function adjustWindow() {
   // https://github.com/c-smile/sciter-js-sdk/discussions/39#discussioncomment-377697
-  const [_, w] = document.state.contentWidths();
-  const h = document.state.contentHeight(w);
+  //const [_, w] = document.state.contentWidths();
+  //const h = document.state.contentHeight(w);
+  const w = 250;
+  const h = 200;
   const [sw, sh] = Window.this.screenBox('frame', 'dimension');
   Window.this.move((sw - w) / 2, (sh - h) / 2, w, h, true);
 }

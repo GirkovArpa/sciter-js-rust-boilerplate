@@ -9,15 +9,26 @@
   </head>
 
   <body>
-      <h1> </h1>
-      <form>
-        <button #sum>Sum:</button>
+    <div .col .container>
+      <div .row>
+        <button #sum><span>Sum:</span></button>
+      </div>
+      <div .row>
         <input |number .sum value=2 />
+      </div>
+      <div .row>
         <input |number .sum value=2 />
-        <button #sum_async>Sum Async:</button>
+      </div>
+      <div .row>
+        <button #sum_async><span>Sum Async:</span></button>
+      </div>
+      <div .row>
         <input |number .sum_async value=4 />
+      </div>
+      <div .row>
         <input |number .sum_async value=1 />
-      </form>
+      </div>
+    </div>
   </body>
 
 </html>

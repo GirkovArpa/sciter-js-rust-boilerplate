@@ -29,7 +29,7 @@ impl sciter::EventHandler for EventHandler {
     );
 }
 fn main() {
-    sciter::set_options(sciter::RuntimeOptions::DebugMode(false)).unwrap();
+    sciter::set_options(sciter::RuntimeOptions::DebugMode(true)).unwrap();
     let archived = include_bytes!("../target/assets.rc");
     sciter::set_options(sciter::RuntimeOptions::ScriptFeatures(
         sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_SYSINFO  as u8 |

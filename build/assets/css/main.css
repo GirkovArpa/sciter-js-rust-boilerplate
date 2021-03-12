@@ -3,35 +3,52 @@
   src: url(../font/fira_sans.ttf);
 }
 
+* {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 6vh;
+}
+
 html {
   font: 'Fira Sans';
-  width: max-content;
-  height: max-content;
-  min-height: min-content;
-  min-width: min-content;
+  min-width: max-content;
+  min-height: max-content;
 }
 
 body {
-  text-align: center;
-  vertical-align: middle;
-  margin: *;
-  padding: 5em;
+  size: *;
+  margin: 0;
 }
 
-h1 {
-  margin-top: 0;
+.container {
+  size: *;
+  padding: 1em;
 }
 
-form {
-  flow: row(button, input, input);
+.col {
+  size: *;
+  flow: vertical;
   border-spacing: 0.5em;
 }
 
-form>label {
-  width: max-content;
+.row {
+  size: *;
+  flow: horizontal;
 }
 
-form>input {
-  width: 4em;
+input {
+  size: *;
   text-align: right;
+}
+
+input>caption {
+  size: *;
+}
+
+button {
+  size: *;
+}
+
+button>span {
+  width: *;
 }
